@@ -12,7 +12,7 @@ class Perceptron:
             sigmoid = 1 / (1 + np.exp(- ((variaveis[j][0] * self.w1) + (variaveis[j][1] * self.w2) + self.bias)))
 
             self.w1 = self.w1 + (taxa_aprendizado * (target[j][0] - sigmoid) * variaveis[j][0])
-            self.w2 = self.w2 + (taxa_aprendizado * (target[j][0] - sigmoid) * variaveis[j][1])  # Correção aqui
+            self.w2 = self.w2 + (taxa_aprendizado * (target[j][0] - sigmoid) * variaveis[j][1]) 
             self.bias = self.bias + (taxa_aprendizado * (target[j][0] - sigmoid))
 
             print(f'Época: {i} - Erro: {target[j][0] - sigmoid} - w1: {self.w1} - w2: {self.w2} - bias: {self.bias}')
